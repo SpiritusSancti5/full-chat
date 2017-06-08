@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Chat</title>
+
+		<link rel="stylesheet" href="main.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="chat">
+			<div class="name">Chat Box</div>
+			<div class="messages">
+        <ul id="messages"></ul>
+      </div>
+			<form class="msgBox" action="">
+				<div class="userInput">
+      	<textarea id="m" placeholder="Message..." class="textarea"/></textarea>
+				<button>Send</button>
+				</div>
+    	</form>
+		</div>
+
+
+		<script src="https://use.fontawesome.com/67b6ba40f0.js"></script>
+		<script scr="https://ajax.googleapis.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
+		<script>
+			$(function () {
+    		var socket = io();
+
+    		$('form').submit(function(){
+      		socket.emit('chat message', $('#m').val());
+      		$('#m').val('');
+      		return false;
+    		});
+
+				socket.on('chat message', function(msg){
+      		$('#messages').append($('<li>').text(msg));
+    		});
+
+				socket.on('user connect', function(msg){
+      		$('#messages').append($('<li class="userStatus">').text(msg));
+    		});
+  		});
+		</script>
+
+	</body>
+</html>

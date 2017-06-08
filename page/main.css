@@ -1,0 +1,124 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+}
+
+body,
+input {
+	font: 13px "Slabo+27px", sans-serif;
+}
+
+.messages {
+    background-color: #4fa8bb;
+    /* Android 2.3 */
+    background-image: -webkit-radial-gradient(left top, ellipse farthest-corner,rgb(172, 205, 212) 0%,rgb(24, 154, 177) 50%,rgb(8, 123, 149) 51%,rgb(112, 192, 209) 100%);
+    /* IE10+ */
+    background-image: radial-gradient(ellipse farthest-corner at left top,rgb(172, 205, 212) 0%,rgb(24, 154, 177) 50%,rgb(8, 123, 149) 51%,rgb(112, 192, 209) 100%);
+    background-image: -ms-radial-gradient(left top, ellipse farthest-corner,rgb(172, 205, 212) 0%,rgb(24, 154, 177) 50%,rgb(8, 123, 149) 51%,rgb(112, 192, 209) 100%);
+}
+
+.chat {
+	max-width: 500px;
+  padding: 8px;
+}
+
+.messages {
+	font: 15px 'Aref Ruqaa', serif;
+	width: 100%;
+	height: 300px;
+	overflow-y: scroll;
+	padding: 10px;
+}
+
+.userStatus {
+  color: #e13ad8;
+  text-align: center;
+  font-weight: 230;
+  font-size: 13px;
+}
+
+.messages,
+.textarea,
+.name {
+	border: 1px solid #000;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+.name {
+	width: 100%;
+	padding: 10px;
+	border-bottom: 0;
+	margin: 0;
+	border-top-style: inset;
+    border-bottom-style: outset;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: linear-gradient(to bottom right, green, black);
+    color: #fff;
+}
+
+.userInput {
+  resize: none;
+	width: 100%;
+  padding: 10px;
+	margin: 0;
+	border-top: 0;
+	max-width: 100%;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  font: 15px 'Gentium Book Basic', 'Slabo 27px', sans-serif;
+}
+
+.textarea {
+  resize: none;
+	width: 100%;
+	padding: 10px;
+	margin: -10px;
+	border-top: 0;
+	max-width: 100%;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  font: 15px 'Gentium Book Basic', 'Slabo 27px', sans-serif;
+}
+
+form button {
+  resize: none;
+	width: 10%;
+	padding: 10px;
+	margin: -1px;
+	max-width: 100%;
+  border-radius: 5px;
+  background-color: #04afac;
+  color: #f4fffc;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+form div {
+  position:relative;
+}
+
+form button{
+  position:absolute;
+  top: 20%;
+  right: 5px;
+}
+
+body {
+    background-color: #008b8b;
+    /* Android 2.3 */
+    background-image: -webkit-radial-gradient(left bottom, ellipse farthest-side,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+    /* IE10+ */
+    background-image: radial-gradient(ellipse farthest-side at left bottom,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+    background-image: -ms-radial-gradient(left bottom, ellipse farthest-side,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+}
